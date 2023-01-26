@@ -101,10 +101,11 @@ function App() {
             setHighScore((prev) => {
                 return { ...prev, count: score.count };
             });
-    }, [score]);
+    },[score.count, highScore.count]);
     return (
         <div className="App">
-            <h1>Memory game</h1>
+            <h1>Memory Game</h1>
+            <h4>Don't Tap The Same {<br />} Hieroglyph Twice.</h4>
             <div>Score : {score.count}</div>
             <div>Hight Score : {highScore.count}</div>
             <div className="card-container">
