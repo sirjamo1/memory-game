@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/memory-game/static/css/main.4301d351.css",
+    "main.js": "/memory-game/static/js/main.95479171.js",
+    "static/media/hieroglyphM.png": "/memory-game/static/media/hieroglyphM.a7938adbad9e30692450.png",
+    "index.html": "/memory-game/index.html",
+    "main.4301d351.css.map": "/memory-game/static/css/main.4301d351.css.map",
+    "main.95479171.js.map": "/memory-game/static/js/main.95479171.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4301d351.css",
+    "static/js/main.95479171.js"
+  ]
+}
