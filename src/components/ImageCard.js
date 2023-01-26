@@ -1,12 +1,12 @@
 import React from "react";
 
-const ImageCard = ({ memoryState, clickedToTrue }) => {
-    console.log(memoryState, "from imagecard comp");
+const ImageCard = ({ cards, onCardClick }) => {
+    console.log(cards, "from imagecard comp");
 
-    return memoryState.cards.map((card) => {
+    return cards.map((card) => {
         return (
-            <div key={card.id} onClick={() => clickedToTrue(card.id)}>
-                <img src={card.src} />
+            <div key={card.id} onClick={() => onCardClick(card.id)}>
+                <img src={card.src} alt={`hieroglyph ${card.name}`} />
             </div>
         );
     });
