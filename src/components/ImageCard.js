@@ -1,8 +1,11 @@
 import React from "react";
 
 const ImageCard = ({ cards, onCardClick }) => {
-    console.log(cards, "from imagecard comp");
+    console.log(cards, "from image card comp");
+    const createRandomArr = () => {
 
+    }
+console.log(Math.floor(Math.random()*10))
     return cards.map((card) => {
         return (
             <div key={card.id} onClick={() => onCardClick(card.id)}>

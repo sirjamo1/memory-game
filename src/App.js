@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import ImageCard from "./components/ImageCard";
 import hieroglyphA from "./components/assets/images/hieroglyphA.png";
@@ -92,14 +92,16 @@ function App() {
                         count: prev.count + 1,
                     };
                 });
-                if (score.count + 1 > highScore.count)
-                    setHighScore((prev) => {
-                        return { ...prev, count: prev.count + 1 };
-                    });
             }
         });
         setCards(cardsCopy);
     };
+    useEffect(() => {
+        if (score.count > highScore.count)
+            setHighScore((prev) => {
+                return { ...prev, count: score.count };
+            });
+    }, [score]);
     return (
         <div className="App">
             <h1>Memory game</h1>
