@@ -71,14 +71,14 @@ function App() {
         ],
     });
     const restartGame = (memoryStateCopy) => {
-        memoryStateCopy.cards.map((card) => {
+        memoryStateCopy.cards.forEach((card) => {
             card.clicked = false;
         });
         setMemoryState(memoryStateCopy);
     };
     const clickedToTrue = (id) => {
         let memoryStateCopy = { ...memoryState };
-        memoryStateCopy.cards.map((card) => {
+        memoryStateCopy.cards.forEach((card) => {
             if (card.id === id) {
                 if (card.clicked === true) {
                     return restartGame(memoryStateCopy);
